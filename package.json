@@ -1,0 +1,59 @@
+{
+  "name": "my_flask_app",
+  "version": "1.0.0",
+  "description": "A flasky app.",
+  "scripts": {
+    "build": "run-script-os",
+    "build:win32": "SET NODE_ENV=production && webpack --progress --colors -p && npm run flask-static-digest",
+    "build:default": "NODE_ENV=production webpack --progress --colors -p && npm run flask-static-digest",
+    "start": "run-script-os",
+    "start:win32": "concurrently -n \"WEBPACK,FLASK\" -c \"bgBlue.bold,bgMagenta.bold\" \"npm run webpack-watch:win32\" \"npm run flask-server\"",
+    "start:default": "concurrently -n \"WEBPACK,FLASK\" -c \"bgBlue.bold,bgMagenta.bold\" \"npm run webpack-watch\" \"npm run flask-server\"",
+    "webpack-watch": "run-script-os",
+    "webpack-watch:win32": "SET NODE_ENV=debug && webpack --mode development --watch",
+    "webpack-watch:default": "NODE_ENV=debug webpack --mode development --watch",
+    "flask-server": "flask run --host=0.0.0.0",
+    "flask-static-digest": "flask digest compile",
+    "lint": "eslint \"assets/js/*.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourGithubUsername/my_flask_app.git"
+  },
+  "author": "First Last",
+  "license": "MIT",
+  "engines": {
+    "node": ">=12"
+  },
+  "bugs": {
+    "url": "https://github.com/yourGithubUsername/my_flask_app/issues"
+  },
+  "homepage": "https://github.com/yourGithubUsername/my_flask_app#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.0",
+    "bootstrap": "^4.5.2",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.15.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "chokidar": "^3.4.2",
+    "concurrently": "^5.3.0",
+    "css-loader": "^4.3.0",
+    "eslint": "^7.10.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "file-loader": "^6.1.0",
+    "less": "^3.12.2",
+    "less-loader": "^7.0.1",
+    "mini-css-extract-plugin": "^0.12.0",
+    "raw-loader": "^4.0.1",
+    "run-script-os": "^1.1.1",
+    "url-loader": "^4.1.0",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
+  }
+}
