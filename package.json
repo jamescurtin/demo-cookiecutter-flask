@@ -23,7 +23,7 @@
   "author": "First Last",
   "license": "MIT",
   "engines": {
-    "node": ">=12"
+    "node": ">=14"
   },
   "bugs": {
     "url": "https://github.com/yourGithubUsername/my_flask_app/issues"
