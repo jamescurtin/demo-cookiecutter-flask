@@ -12,11 +12,21 @@ TEST_PATH = os.path.join(PROJECT_ROOT, "tests")
 
 
 @click.command()
-def test():
+@click.option(
+    "-c",
+    "--coverage",
+    default=True,
+    is_flag=True,
+    help="Show coverage report",
+)
+def test(coverage):
     """Run the tests."""
     import pytest
 
-    rv = pytest.main([TEST_PATH, "--verbose"])
+    args = [TEST_PATH, "--verbose"]
+    if coverage:
+        args.append("--cov=my_flask_app")
+    rv = pytest.main(args)
     exit(rv)
 
 
