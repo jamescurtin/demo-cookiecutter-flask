@@ -12,7 +12,7 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: "3.11"
-      - uses: actions/setup-node@v3.5.1
+      - uses: actions/setup-node@v3.6.0
         with:
           node-version: "18.x"
           registry-url: "https://registry.npmjs.org"
