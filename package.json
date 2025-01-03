@@ -23,7 +23,7 @@
   "author": "First Last",
   "license": "MIT",
   "engines": {
-    "node": ">=20"
+    "node": ">=22"
   },
   "bugs": {
     "url": "https://github.com/yourGithubUsername/my_flask_app/issues"
@@ -43,12 +43,13 @@
     "chokidar": "4.0.3",
     "concurrently": "9.1.2",
     "css-loader": "7.1.2",
-    "eslint": "8.57.0",
-    "eslint-config-airbnb-base": "15.0.0",
-    "eslint-plugin-import": "2.31.0",
+    "eslint": "9.17.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-prettier": "5.2.1",
     "less": "4.2.1",
     "less-loader": "12.2.0",
     "mini-css-extract-plugin": "2.9.2",
+    "prettier": "3.4.2",
     "run-script-os": "1.1.6",
     "webpack": "5.97.1",
     "webpack-cli": "6.0.1"
